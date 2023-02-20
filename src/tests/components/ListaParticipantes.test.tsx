@@ -11,7 +11,7 @@ jest.mock('../../state/hooks/useListaDeParticipantes', () => {
     }
 })
 
-describe('O comportamento da Lista', () => { 
+describe('O Comportamento da Lista Vazia', () => { 
 
     //define retorno de lista como array vazio
     beforeEach(() => {
@@ -31,7 +31,7 @@ describe('O comportamento da Lista', () => {
     })
 })
 
-describe('', () => {
+describe('O Comportamento da Lista Preenchida', () => {
     //define retorno de lista como const participantes
     const participantes = [ 'Geraldo', 'Luana' ]         
     beforeEach(() => {
