@@ -1,6 +1,6 @@
-import React from 'react'
 import { useListaDeParticipantes } from '../../state/hooks/useListaDeParticipantes'
 import { useNavigate } from 'react-router-dom'
+import { Botao, RodapeContainer } from './styles'
 
 export default function Rodape() {
     const participantes = useListaDeParticipantes()
@@ -11,13 +11,14 @@ export default function Rodape() {
     }
 
     return (
-        <footer>
-            <button 
+        <RodapeContainer>
+            <Botao 
                 disabled={participantes.length < 3}
                 onClick={iniciar}
             >
                 Inicar Brincadeira
-            </button>
-        </footer>
+            </Botao>
+            <img src="/imagens/sacolas.png" alt="Sacolas de compras" />
+        </RodapeContainer>
     )
 }

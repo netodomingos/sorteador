@@ -1,12 +1,13 @@
-import { Header, ImagemLogo, Participante } from './style'
+// src/componentes/Cabecalho/index.tsx
+import './style.css'
 
-import ParticipanteImage from '../../assets/images/participante.png'
-
-export default function Cabecalho() {
-  return (
-    <Header>
-        <ImagemLogo role="img" aria-label='Logo do Sorteador'></ImagemLogo>
-        <Participante src={ParticipanteImage} alt="Participante com um presente na mão" />
-    </Header>
-  )
+const Cabecalho = () => {
+    return (
+        <header className="cabecalho">
+            <div className="imagem-logo" role="img" aria-label='Logo do Sorteador'></div>
+            <img className='participante' src="/imagens/participante.png" alt="Participante com um presente na mão" />
+        </header>
+    )
 }
+
+export default Cabecalho

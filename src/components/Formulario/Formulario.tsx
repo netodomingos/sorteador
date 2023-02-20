@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { useState } from 'react'
 import { useAdicionarParticipante } from '../../state/hooks/useAdcionarParticipante'
 import { useMensagemDeErro } from '../../state/hooks/useMensagemDeErro'
+import { Button, Container, Erro, Input } from './styles'
 
 export default function Formulario() {
   const [nome, setNome] = useState('')
@@ -17,12 +18,12 @@ export default function Formulario() {
 
     setNome('')
     inputRef.current?.focus()
-
   }
 
   return (
     <form onSubmit={adicionarParticipante}>
-        <input 
+      <Container>
+        <Input 
           type="text" 
           placeholder='Insira os nomes dos participantes'
           value={nome}
@@ -30,11 +31,11 @@ export default function Formulario() {
           ref={inputRef}
         />
 
-        <button disabled={!nome}>
+        <Button disabled={!nome}>
           Adicionar
-        </button>
-        
-        {mensagemDeErro && <p role='alert'>{mensagemDeErro}</p>}
+        </Button>
+        {mensagemDeErro && <Erro role='alert'>{mensagemDeErro}</Erro>}
+      </Container>
     </form>
   )
 }
