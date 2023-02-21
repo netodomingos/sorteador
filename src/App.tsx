@@ -1,11 +1,18 @@
-import React from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { RecoilRoot } from "recoil";
+import Configuracao from "./pages/Configuracao";
+import Sorteio from "./pages/Sorteio";
 
 function App() {
   return (
-    <div className="App">
-      testes
-    </div>
+    <BrowserRouter>
+      <RecoilRoot>
+        <Routes>
+          <Route path="/" element={<Configuracao />} />
+          <Route path='/sorteio' element={<Sorteio />}/>
+        </Routes>
+      </RecoilRoot>
+    </BrowserRouter>
   );
 }
 
