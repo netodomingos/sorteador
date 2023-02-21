@@ -65,7 +65,7 @@ jobs:
           name: production-files
           path: ./dist
       - name: Deploy to gh pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: sorteador/actions-gh-pages@v3
         with:
         #SECRET MUDA DEPENDENDO DO PROJETO
           github_token: ${{ secrets.SORTEADOR_SECRET }} 
