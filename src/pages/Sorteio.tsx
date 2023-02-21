@@ -31,6 +31,7 @@ export default function Sorteio() {
               value={participante}
               onChange={evento => setParticipante(evento.target.value)}
             >
+              <option value="">selecione seu nome</option>
               {participantes.map(participante => <option value={participante} key={participante}>{participante}</option>)}
             </select>
             <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
