@@ -1,5 +1,5 @@
 import React from 'react'
-import { realizarSorteio } from '../../utils/RealizarSorteio'
+import { realizarSorteio } from '../../utils/realizarSorteio'
 
 describe('O sorteador de um amigo secreto', () => {
     test('Cada participante não sorteie o próprio nome', () => { 

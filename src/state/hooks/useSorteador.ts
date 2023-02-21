@@ -1,5 +1,5 @@
 import { useSetRecoilState } from 'recoil'
-import { realizarSorteio } from "../../utils/RealizarSorteio"
+import { realizarSorteio } from "../../utils/realizarSorteio"
 import { resultadoState } from "../atom"
 import { useListaDeParticipantes } from "./useListaDeParticipantes"
 
